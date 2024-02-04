@@ -41,4 +41,4 @@ runs:
       shell: bash
       run: |
         git reset --hard HEAD~1
-        git push -f origin ${{ inputs.branch }}
+        git push -f origin ${{ github.ref_name }}

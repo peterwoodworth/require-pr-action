@@ -22,6 +22,7 @@ runs:
       with:
         script: |
           const users = '${{ inputs.users }}'.split(',');
+          console.log(users.length);
           if (!users.includes(context.actor) && users.length > 0) {
             return true;
           }

@@ -1,9 +1,6 @@
 name: 'Require PR Action'
 description: Use this action to revert commits on a branch that were pushed without a PR. Can limit to only certain users
 inputs:
-  branch:
-    description: 'Branch to monitor for commits pushed without a PR'
-    required: true
   users:
     description: 'Comma separated list of users to deny to push without a PR. By default this applies to all users'
     required: false

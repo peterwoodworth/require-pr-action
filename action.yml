@@ -23,7 +23,7 @@ runs:
         script: |
           const users = '${{ inputs.users }}'.split(',');
           console.log(users.length);
-          if (!users.includes(context.actor) && users.length > 0) {
+          if (!users.includes(context.actor) && users[0]) {
             return true;
           }
           const result = await github.rest.repos.listPullRequestsAssociatedWithCommit({

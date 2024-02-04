@@ -3,7 +3,7 @@
 > [!WARNING]  
 > Using this action can result in destroying hard work. Please be careful when using this action
 
-Are you unable to use branch protection because you're working on a private repository? Is there someone on your team who keeps pushing commits without PRs despite being asked not to? This action is for you! Simply use this action in your repo, and any commits pushed by certain users (or all) will automatically be hard reset if they did not submit a PR. 
+Are you unable to use branch protection because you're working on a private repository? Is there someone on your team who keeps pushing commits without PRs despite being asked not to? This action is for you! Simply use this action in your repo, and any commits pushed by certain users (or all) will automatically be hard reset to the state before push (`git reset --hard HEAD~1`) if they did not submit a PR. 
 
 ## Usage
 

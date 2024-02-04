@@ -13,14 +13,12 @@ runs:
   steps:
     - name: Checkout
       uses: actions/checkout@v4
-      shell: bash
       with:
         ref: ${{ github.event.push.ref }}
         fetch-depth: 2
     - name: Determine if push from PR
       uses: actions/github-script@v7
       id: determine_if_pr
-      shell: bash
       with:
         script: |
           const users = '${{ inputs.users }}'.split(',');
